@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guilherme Faria - Desenvolvedor Full Stack</title>
+  
+  <!-- Meta tags melhoradas para SEO -->
+  <meta name="description" content="Guilherme Faria - Desenvolvedor Full Stack especializado em soluções web modernas, aplicações mobile e consultoria tecnológica">
+  <meta name="keywords" content="desenvolvedor full stack, programador, web development, mobile apps, React, Node.js, JavaScript, Portugal">
+  <meta name="author" content="Guilherme Faria">
+  <meta property="og:title" content="Guilherme Faria - Desenvolvedor Full Stack">
+  <meta property="og:description" content="Soluções tecnológicas modernas para seu negócio">
+  <meta property="og:image" content="assets/img/perfil.jpg">
+  
+  <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly link widget end -->
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="assets/cs/styles.css">
+  <link rel="stylesheet" href="assets/cs/index.css">
+  
+  <!-- Fontes e Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  
+  <!-- Preload de recursos críticos -->
+  <link rel="preload" href="assets/img/perfil.jpg" as="image">
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div class="scroll-indicator"></div>
+  
+  <div class="container">
+    <!-- Menu de Navegação Melhorado -->
+    <nav class="profile-nav">
+      <a href="#home" class="nav-link active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="servicos.html" class="nav-link">
+        <i class="fas fa-code"></i>
+        <span>Serviços</span>
+      </a>
+      <a href="photography.html" class="nav-link">
+        <i class="fas fa-camera"></i>
+        <span>Photography</span>
+      </a>
+      <a href="projects.html" class="nav-link">
+        <i class="fas fa-crown"></i>
+        <span>Projetos</span>
+      </a>
+    </nav>
+
+    <!-- Seção Principal Melhorada -->
+    <section id="linktree" class="section">
+      <div class="profile">
+        <div class="profile-wrapper">
+          <div class="profile-image-container">
+            <img src="assets/img/perfil.jpg" alt="Guilherme Faria - Desenvolvedor Full Stack" class="profile-img">
+            <div class="profile-badges">
+              <span class="badge verified" title="Perfil Verificado">
+                <i class="fas fa-check-circle"></i>
+              </span>
+              <span class="badge premium" title="Membro Premium">
+                <i class="fas fa-crown"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <h1 class="typing-effect">Guilherme Faria</h1>
+        <p class="bio">Desenvolvedor Full Stack & Consultor Tech</p>
+        <div class="tags">
+          <span class="tag">Web</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Cloud</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <a href="mailto:guilherme.faria.gui@gmail.com" class="action-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Contacto Direto</span>
+        </a>
+        <button class="action-btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/guilherme-faria-gui/30min'});return false;">
+            <i class="fas fa-calendar-check"></i>
+            <span>Agendar Reunião</span>
+        </button>
+    </div>
+
+    <!-- Projetos em Destaque -->
+    <div class="featured-projects">
+        <h3><i class="fas fa-star"></i> Projetos em Destaque</h3>
+        <div class="project-grid">
+            <!-- Projeto 1 - Portfolio -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="assets/img/Project1.JPG" 
+                         alt="Portfolio Preview"
+                         loading="lazy"
+                         style="width: 100%; height: 200px; object-fit: cover; object-position: center 10%;">
+                     </div>
+                <div class="project-info">
+                    <h4>Portfolio Pessoal</h4>
+                    <div class="project-links">
+                            <button 
+                                onclick="window.open('https://lourencoghj.github.io/Portfolio/', '_blank')"
+                                class="project-btn">
+                                <i class="fas fa-eye"></i> Ver Projeto
+                            </button>
+                    </div>
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Stack Tecnológica Melhorada -->
+    <div class="tech-stack">
+        <h3><i class="fas fa-layer-group"></i> Stack Tecnológica</h3>
+        <div class="tech-grid">
+            <!-- Frontend -->
+            <div class="tech-category">
+                <h4>Frontend</h4>
+                <div class="tech-items">
+                    <span class="tech-item" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="React">
+                        <i class="fab fa-react"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="tech-category">
+                <h4>Backend</h4>
+                <div class="tech-items">
+                    <span class="tech-item" data-tooltip="Node.js">
+                        <i class="fab fa-node-js"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Python">
+                        <i class="fab fa-python"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="PHP">
+                        <i class="fab fa-php"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Java">
+                        <i class="fab fa-java"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Mobile Development -->
+            <div class="tech-category">
+                <h4>Desenvolvimento Mobile</h4>
+                <div class="tech-items">
+                    <span class="tech-item" data-tooltip="Android">
+                        <i class="fab fa-android"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="React Native">
+                        <i class="fab fa-react"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Kotlin">
+                        <i class="fas fa-mobile-alt"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Flutter">
+                        <i class="fas fa-code"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Ferramentas & DevOps -->
+            <div class="tech-category">
+                <h4>Ferramentas & DevOps</h4>
+                <div class="tech-items">
+                    <span class="tech-item" data-tooltip="Git">
+                        <i class="fab fa-git-alt"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Docker">
+                        <i class="fab fa-docker"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="AWS">
+                        <i class="fab fa-aws"></i>
+                    </span>
+                    <span class="tech-item" data-tooltip="Linux">
+                        <i class="fab fa-linux"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Melhorado -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Sobre -->
+            <div class="footer-section">
+                <h4><i class="fas fa-user"></i> Sobre</h4>
+                <p class="footer-description">
+                    Desenvolvedor Full Stack apaixonado por criar soluções tecnológicas inovadoras e eficientes.
+                </p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-section">
+                <h4><i class="fas fa-address-card"></i> Contacto Profissional</h4>
+                <div class="contact-info">
+                    <a href="mailto:guilherme@exemplo.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> guilherme.faria.gui@gmail.com
+                    </a>
+                   
+                </div>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="footer-section">
+                <h4><i class="fas fa-share-alt"></i> Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/LourencoGHJ" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-icon" 
+                       aria-label="GitHub"
+                       data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/guilhermee.faria/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-icon" 
+                       aria-label="Instagram"
+                       data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <span>•</span>
+            <a href="servicos.html">Serviços</a>
+            <span>•</span>
+            <a href="photography.html">Photography</a>
+            <span>•</span>
+            <a href="projects.html">Projetos</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2024 LourencoGHJ . Feito com 💻 e muito 
+                <span class="footer-heart">
+                    <i class="fas fa-coffee"></i>
+                </span>
+                . 
+            </p>
+            <p>Todos os direitos reservados.</p>
+        </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/index.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+</body>
+</html>
+

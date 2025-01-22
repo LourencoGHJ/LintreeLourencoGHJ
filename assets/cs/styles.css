@@ -1,0 +1,171 @@
+/* ===================================== */
+/* VARIÁVEIS E CONFIGURAÇÃO BASE         */
+/* ===================================== */
+:root {
+    /* Cores Principais */
+    --primary: #4f46e5;
+    --secondary: #818cf8;
+    --accent: #6366f1;
+    
+    /* Backgrounds Elegantes */
+    --bg-glass: rgba(255, 255, 255, 0.15);
+    --bg-glass-dark: rgba(17, 24, 39, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
+    /* Sombras Refinadas */
+    --shadow-soft: 0 8px 32px rgba(79, 70, 229, 0.15);
+    --shadow-strong: 0 8px 32px rgba(79, 70, 229, 0.3);
+    
+    /* Gradientes Estáticos */
+    --gradient-bg: linear-gradient(
+        135deg,
+        #1a1a2e 0%,
+        #16213e 25%,
+        #1a1a2e 50%,
+        #16213e 75%,
+        #1a1a2e 100%
+    );
+}
+
+/* ===================================== */
+/* ESTILOS BASE                          */
+/* ===================================== */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #fff;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.2) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+}
+
+/* ===================================== */
+/* MODO ESCURO                           */
+/* ===================================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gradient-bg: linear-gradient(
+            135deg,
+            #0a0a1a 0%,
+            #0f1629 25%,
+            #0a0a1a 50%,
+            #0f1629 75%,
+            #0a0a1a 100%
+        );
+    }
+
+    .container {
+        background: rgba(17, 24, 39, 0.85);
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* ===================================== */
+/* RESPONSIVIDADE BASE                   */
+/* ===================================== */
+@media (max-width: 576px) { 
+    .container {
+        margin: 0.5rem;
+        padding: 0.8rem;
+        border-radius: 12px;
+    }
+    
+    body {
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    /* Melhor gestão de espaço em dispositivos pequenos */
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 0.9rem; }
+}
+
+/* Ajuste específico para dispositivos muito pequenos */
+@media (max-width: 320px) {
+    .container {
+        margin: 0.3rem;
+        padding: 0.5rem;
+    }
+    
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablets */
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Pequenos laptops */
+    .container {
+        max-width: 900px;
+        padding: 1.8rem;
+    }
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1025px) { /* PCs */
+    .container {
+        max-width: 1200px;
+        padding: 2rem;
+    }
+    body {
+        font-size: 20px;
+    }
+}

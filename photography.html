@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Faria - Photography</title>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/cs/styles.css">
+    <link rel="stylesheet" href="assets/cs/index.css">
+    <link rel="stylesheet" href="assets/cs/photography.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu de Navegação -->
+        <nav class="profile-nav">
+            <a href="index.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="servicos.html" class="nav-link">
+              <i class="fas fa-code"></i>
+              <span>Serviços</span>
+            </a>
+            <a href="photography.html" class="nav-link active">
+              <i class="fas fa-camera"></i>
+              <span>Photography</span>
+            </a>
+            <a href="projects.html" class="nav-link">
+              <i class="fas fa-crown"></i>
+              <span>Projetos</span>
+            </a>
+          </nav>
+
+        <!-- Header -->
+        <header class="profile">
+            <h1 class="profile-title">Photography</h1>
+            <p class="profile-bio">Momentos únicos através das lentes</p>
+        </header>
+
+        <!-- Galeria de Fotos -->
+        <section class="photo-gallery">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="nature">Carros</button>
+                <button class="filter-btn" data-filter="urban">Urbano</button>
+                <button class="filter-btn" data-filter="portrait">Natureza</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Imagens serão adicionadas dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Serviços de Fotografia -->
+        <section class="photo-services">
+            <h2>Serviços Fotográficos</h2>
+            <div class="services-grid">
+                <div class="photo-service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Eventos</h3>
+                    <p>Cobertura profissional de eventos especiais</p>
+                </div>
+                <div class="photo-service-card">
+                    <i class="fas fa-portrait"></i>
+                    <h3>Ensaios</h3>
+                    <p>Sessões fotográficas personalizadas</p>
+                </div>
+                <div class="photo-service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Corporativo</h3>
+                    <p>Fotografia empresarial e institucional</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/photography.js"></script>
+</body>
+</html> 

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Faria - Serviços</title>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/cs/styles.css">
+    <link rel="stylesheet" href="assets/cs/index.css">
+    <link rel="stylesheet" href="assets/cs/servicos.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-indicator"></div>
+    
+    <div class="container">
+        <!-- Menu de Navegação -->
+        <nav class="profile-nav">
+            <a href="index.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="servicos.html" class="nav-link active">
+              <i class="fas fa-code"></i>
+              <span>Serviços</span>
+            </a>
+            <a href="photography.html" class="nav-link">
+              <i class="fas fa-camera"></i>
+              <span>Photography</span>
+            </a>
+            <a href="projects.html" class="nav-link">
+              <i class="fas fa-crown"></i>
+              <span>Projetos</span>
+            </a>
+          </nav>
+
+        <!-- Header da Página -->
+        <header class="profile">
+            <h1 class="profile-title">Meus Serviços</h1>
+            <p class="profile-bio">Soluções profissionais em desenvolvimento e programação</p>
+        </header>
+
+        <!-- Grid de Serviços -->
+        <section class="services-grid grid">
+            <!-- Desenvolvimento Web -->
+            <div class="service-card card animate-fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de websites modernos e responsivos com as últimas tecnologias</p>
+                    <ul class="service-features">
+                        <li>Sites Responsivos</li>
+                        <li>Landing Pages</li>
+                        <li>E-commerce</li>
+                        <li>Otimização SEO</li>
+                    </ul>
+                    <a href="mailto:guilherme.faria.gui@gmail.com?subject=Orçamento: Desenvolvimento Web&body=Olá, gostaria de solicitar um orçamento para desenvolvimento web. Detalhes do projeto:" class="service-btn">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+
+            <!-- Aplicações Mobile -->
+            <div class="service-card card animate-fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Aplicações Mobile</h3>
+                    <p>Desenvolvimento de aplicativos nativos e híbridos</p>
+                    <ul class="service-features">
+                        <li>iOS & Android</li>
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>PWA</li>
+                    </ul>
+                    <a href="mailto:guilherme.faria.gui@gmail.com?subject=Orçamento: Aplicação Mobile&body=Olá, gostaria de solicitar um orçamento para desenvolvimento mobile. Detalhes do projeto:" class="service-btn">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultoria Tech -->
+            <div class="service-card card animate-fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Consultoria Tech</h3>
+                    <p>Orientação especializada para seus projetos tecnológicos</p>
+                    <ul class="service-features">
+                        <li>Arquitetura de Software</li>
+                        <li>Code Review</li>
+                        <li>Otimização</li>
+                        <li>Mentoria</li>
+                    </ul>
+                    <a href="mailto:guilherme.faria.gui@gmail.com?subject=Orçamento: Consultoria Tech&body=Olá, gostaria de solicitar um orçamento para consultoria tecnológica. Detalhes da consultoria:" class="service-btn">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Processo de Trabalho -->
+        <section class="work-process">
+            <h2>Como Trabalho</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Briefing</h3>
+                        <p>Entendimento detalhado das suas necessidades</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Proposta</h3>
+                        <p>Desenvolvimento do plano de ação</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Execução</h3>
+                        <p>Desenvolvimento com atualizações regulares</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Entrega</h3>
+                        <p>Produto final com suporte contínuo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Contato -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Solicitar Orçamento</h3>
+                <form id="serviceForm" onsubmit="submitServiceForm(event)">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <select name="service" required>
+                        <option value="">Selecione o Serviço</option>
+                        <option value="web">Desenvolvimento Web</option>
+                        <option value="mobile">Aplicações Mobile</option>
+                        <option value="consulting">Consultoria Tech</option>
+                    </select>
+                    <textarea placeholder="Descreva seu projeto" required></textarea>
+                    <button type="submit" class="btn">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+
+        
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html> 

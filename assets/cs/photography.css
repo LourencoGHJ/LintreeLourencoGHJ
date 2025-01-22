@@ -1,0 +1,423 @@
+/* ===================================== */
+/* ESTILOS DA GALERIA                    */
+/* ===================================== */
+.photo-gallery {
+    padding: 2rem 0;
+}
+
+/* Header da Galeria */
+.photo-header {
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.photo-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.photo-header p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filtros da Galeria */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.filter-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+.filter-btn:active {
+    transform: translateY(0);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* ===================================== */
+/* SERVIÇOS FOTOGRÁFICOS                 */
+/* ===================================== */
+.photo-services {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.photo-services h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.photo-services h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #6B73FF, #000DFF);
+    border-radius: 3px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.photo-service-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #6B73FF, #000DFF);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.photo-service-card:hover::before {
+    opacity: 1;
+}
+
+.photo-service-card i {
+    font-size: 2.5rem;
+    color: #6B73FF;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.photo-service-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+    color: #000DFF;
+}
+
+.photo-service-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.photo-service-card p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Efeito de brilho nos cards */
+.photo-service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-service-card:hover::after {
+    opacity: 1;
+}
+
+/* ===================================== */
+/* MODAL DE VISUALIZAÇÃO                 */
+/* ===================================== */
+.photo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.1);
+}
+
+/* Animação de zoom ao abrir */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: zoomIn 0.3s ease forwards;
+}
+
+/* Responsividade do Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .close-modal {
+        top: -35px;
+        right: 0;
+    }
+}
+
+/* ===================================== */
+/* RESPONSIVIDADE                        */
+/* ===================================== */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .photo-header h1 {
+        font-size: 2rem;
+    }
+
+    .photo-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    .photo-services {
+        padding: 3rem 0;
+    }
+
+    .photo-services h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .photo-service-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .photo-service-card i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .gallery-filters {
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        padding: 0 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .photo-header {
+        padding: 1.5rem 0;
+    }
+
+    .photo-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .photo-header p {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+
+    .photo-service-card {
+        padding: 1.2rem;
+        margin: 0 0.5rem;
+    }
+
+    .photo-service-card i {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .photo-service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .photo-service-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ajustes para dispositivos muito pequenos */
+@media (max-width: 320px) {
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .photo-service-card {
+        padding: 1rem;
+    }
+}
